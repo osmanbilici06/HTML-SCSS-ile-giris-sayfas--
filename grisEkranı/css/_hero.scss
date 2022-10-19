@@ -1,0 +1,50 @@
+.hero {
+  position: relative;
+  background-color: $introBg;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 40vw;
+    bottom: 0px;
+    background-image: url("/img/bg-curvy-mobile.svg"); //bunlar olmadı
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    @include breakpoint(medium) {
+      background-image: url("/img/bg-curvy-desktop.svg"); //bunlar olmadı
+      height: 33vw;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    max-width: 716px;
+  }
+  h1 {
+    max-width: 678px;
+    font-size: 1.5em; // sayfanın büyümesine ve küçülmsine duyarlı
+    line-height: 1.5;
+    margin: 1.1em 0;
+  }
+  p {
+    max-width: 585px;
+    font-size: 0.95em;
+  }
+  button {
+    margin: 8px;
+  }
+}

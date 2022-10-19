@@ -1,0 +1,45 @@
+button,
+.button {
+  border: none;
+  background: linear-gradient(to right, $ctaBlue, $ctaCyan);
+  font-size: 0.875rem;
+  font-weight: 700; // yazı kalınlıgı
+  padding: 15px 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: $border-radius-circle;
+  border-radius: 30px;
+  cursor: pointer;
+
+  @include breakpoint(medium) {
+    max-width: 200px;
+  }
+
+  &:hover {
+    background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+  }
+
+  &--large {
+    @extend .button;
+    max-width: 285px;
+    padding: 20px;
+
+    @include breakpoint(medium){
+        max-width: 285px;
+    }
+  }
+}
+
+input {
+  font-family: $font-body;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  outline: none;
+  border-radius: $border-radius-circle;
+  font-size: 0.7em;
+  color: $footerBlue;
+  padding: 16px 26px;
+}

@@ -1,0 +1,31 @@
+// fonts
+$font-title: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+//Colors
+$introBg: hsl(217, 55%, 13%);
+$mainBlue: #0b111b;
+$testİmonİalBg: #20293b;
+$footerBlue: #8a1423; // renkler kolaylık adına id altına alınır
+$testimonialBg: #4a4b5b;
+$ctaCyan: #64e1d9;
+$ctaBlue: #329ecc;
+//borders
+$border-radius: 10px;
+$border-radius-circle: 30px;
+
+//Breakpoints
+
+$breakpoints: (
+  small: 499px,
+  medium: 699px,
+  large: 999px,
+  xlarge: 1399,
+);
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}

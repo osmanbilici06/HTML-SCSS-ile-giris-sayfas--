@@ -1,0 +1,73 @@
+.quotes {
+  padding-bottom: 200px;
+  &_grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 500px;
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1328px;
+    }
+  }
+  .quote {
+    background-color: $testİmonİalBg;
+    padding: 44px 24px 24px 24px;
+    border-radius: 5px;
+
+    @include breakpoint(large) {
+      padding: 44px 24px 24px 24px;
+    }
+
+    &:first-child:before {
+      content: url("../img/bg-quotes.png");
+      background-size: cover;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      width: 27px;
+      height: 18px;
+
+      @include breakpoint(large) {
+        top: 37px;
+        left: 40px;
+        width: 60px;
+        height: 45px;
+      }
+    }
+    &_text {
+      font-size: 0.65em;
+      margin-bottom: 30px;
+    }
+
+    &_author {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: 20px 20px;
+      column-gap: 14px;
+
+      &-image {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+
+      &-name {
+        font-size: 0.5em;
+        font-weight: 700;
+      }
+
+      &-title {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
